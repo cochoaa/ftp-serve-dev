@@ -22,6 +22,16 @@ Setup
 cd ftp-serve-dev
 vagrant up
 ```
+* Stop virtual machine
+
+```
+vagrant halt
+```
+* Delete virtual machine
+
+```
+vagrant destroy
+```
 * Use with Filezilla 
 
 ```
@@ -29,4 +39,4 @@ user:ftpuser
 pass:ftpuser
 port:21
 ip:192.168.75.75
-dir:/home/ftpuser
+dir:/ftp

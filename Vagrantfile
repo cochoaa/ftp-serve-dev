@@ -8,5 +8,5 @@ Vagrant.configure(2) do |config|
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "2048"
   end
-  config.vm.provision "shell", path: "install_ftp.sh", privileged: false
+  config.vm.provision "shell", path: "provision/install_ftp.sh", privileged: false
 end
