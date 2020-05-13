@@ -8,6 +8,7 @@ function print_out {
 }
 
 print_out "Instalacion FTP"
+sudo apt-get install -y dos2unix  -y > /dev/null
 sudo apt-get install vsftpd  -y > /dev/null
 
 print_out "Iniciar servicio FTP"
@@ -15,6 +16,10 @@ sudo systemctl start vsftpd
 
 print_out "Activar inicio FTP con el S.O"
 sudo systemctl enable vsftpd
+
+print_out "Cambiar formatos de archivos (Windows)"
+sudo dos2unix  /home/vagrant/lib/userlist.txt
+sudo dos2unix  /home/vagrant/lib/vsftpd.conf 
 
 print_out "Crear usuarios"
 cat /home/vagrant/lib/userlist.txt
